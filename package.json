@@ -1,0 +1,40 @@
+{
+  "name": "create-koop-app",
+  "version": "1.0.0",
+  "description": "Koop CLI server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haoliangyu/create-koop-app.git"
+  },
+  "author": {
+    "name": "Haoliang Yu",
+    "email": "hyu@esri.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haoliangyu/create-koop-app/issues"
+  },
+  "homepage": "https://github.com/haoliangyu/create-koop-app#readme",
+  "dependencies": {
+    "@koopjs/cli": "^0.3.1",
+    "archiver": "^3.0.0",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "standard": "^12.0.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "standard --fix",
+      "git add"
+    ]
+  }
+}
