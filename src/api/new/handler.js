@@ -39,6 +39,9 @@ module.exports = async (req, res) => {
       }
     }
 
+    res.set('Content-Type', 'application/zip')
+    res.set('Content-Disposition', `attachment; filename=${spec.name}.zip`)
+
     const archive = archiver('zip', {
       zlib: { level: 9 }
     })
