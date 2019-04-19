@@ -4,7 +4,8 @@
   "description": "Koop CLI server",
   "main": "server.js",
   "scripts": {
-    "start": "PORT=3000 node src/server.js",
+    "start": "node src/server.js",
+    "start:dev": "PORT=3000 node src/server.js",
     "precommit": "lint-staged"
   },
   "repository": {
