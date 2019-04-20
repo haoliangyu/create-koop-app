@@ -4,7 +4,7 @@ Experimental APIs to generate Koop applications and plugins.
 
 This project is based on [@koopjs/cli](https://github.com/koopjs/koop-cli).
 
-Try the live demo [https://create-koop-app.herokuapp.com/api/new/app/my-app](https://create-koop-app.herokuapp.com/api/new/app/my-app) for a live demo.
+Try [https://create-koop-app.herokuapp.com/api/new/app/my-app](https://create-koop-app.herokuapp.com/api/new/app/my-app) for a live demo.
 
 ## API
 
