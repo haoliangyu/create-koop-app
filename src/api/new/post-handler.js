@@ -3,8 +3,6 @@ const path = require('path')
 const archiver = require('archiver')
 const cli = require('@koopjs/cli')
 
-const isValidSpec = require('./is-valid-spec')
-
 module.exports = async (req, res) => {
   if (!req.body) {
     return res.status(400).json({
@@ -52,4 +50,20 @@ module.exports = async (req, res) => {
   } catch (e) {
     res.status(500).send({ message: e.message })
   }
+}
+
+function isValidSpec (spec) {
+  if (!spec.name || !spec.type) {
+    return false
+  }
+
+  if (Array.isArray(spec.plugins)) {
+    for (const plugin of spec.plugins) {
+      if (!plugin.name || !plugin.type) {
+        return false
+      }
+    }
+  }
+
+  return true
 }
